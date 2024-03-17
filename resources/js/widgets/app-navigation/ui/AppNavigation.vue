@@ -1,32 +1,27 @@
 <script setup lang="ts">
-
-import {ref} from "vue";
 import {XDrawer} from "@/shared/components/drawer";
-import {Icon} from "@iconify/vue";
+import {useLayoutStore} from "@/app/layouts/lib/useLayoutStore.ts";
 
-const miniState = ref<boolean>(true);
+const layoutStore = useLayoutStore();
+
 </script>
 
 <template>
     <x-drawer
         class="app-navigation"
-        :model-value="true"
-        @mouseenter="miniState = false"
-        @mouseleave="miniState = true"
-        height="40vw"
-        :mini="miniState"
+        :modelValue="layoutStore.isDrawerOpen"
+        @mouseenter="layoutStore.isDrawerMini = false"
+        @mouseleave="layoutStore.isDrawerMini = true"
+        :mini="layoutStore.isDrawerMini"
     >
-        <div class="flex items-center gap-x-2 text-white">
-            <Icon icon="lets-icons:home" width="30"/>
-            <span v-if="miniState">
-                Home
-            </span>
-        </div>
+        <aside>
+
+        </aside>
     </x-drawer>
 </template>
 
 <style scoped>
 .app-navigation {
-    @apply bg-gray-800;
+    @apply bg-gray-50;
 }
 </style>
