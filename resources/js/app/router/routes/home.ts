@@ -5,5 +5,5 @@ export const ROUTE_NAME = "home";
 export const route: RouteRecordRaw = {
     name: ROUTE_NAME,
     path: "",
-    component: () => import("@/pages/home/HomePage.vue")
+    component: () => import("@/pages/home")
 };
