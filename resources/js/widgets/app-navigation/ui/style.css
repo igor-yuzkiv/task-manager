@@ -1,0 +1,24 @@
+.app-navigation {
+    @apply flex flex-col bg-gray-50 relative w-full h-full overflow-hidden px-4 py-2;
+}
+
+.nav-list {
+    @apply space-y-3 text-sm;
+}
+
+.nav-item {
+    @apply flex w-full shrink-0 items-center gap-x-2 text-gray-700 hover:text-gray-900 cursor-pointer;
+}
+
+.nav-item-icon {
+    @apply w-6 h-6;
+}
+
+.nav-item-text {
+    opacity: 100;
+}
+
+.app-navigation-mini .nav-item-text {
+    opacity: 0;
+}
+
