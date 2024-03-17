@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import {AppNavigation} from "@/widgets/app-navigation";
+defineProps({
 
+});
 </script>
 
 <template>
     <div class="layout">
+        <app-navigation/>
         <main class="main">
             <router-view></router-view>
         </main>
