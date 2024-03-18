@@ -1,13 +1,26 @@
 .app-navigation {
-    @apply flex flex-col bg-gray-50 relative w-full h-full overflow-hidden px-4 py-2;
+    @apply flex flex-col bg-gray-50 w-full h-full overflow-hidden px-4 py-2;
+}
+
+.nav-brand {
+    @apply inline-flex indent-0 items-center gap-x-2 font-extrabold text-blue-500 text-xl;
+}
+
+.app-navigation-mini .nav-brand span {
+    opacity: 0;
+}
+
+.nav-brand img {
+    width: 25px;
+    height: 25px;
 }
 
 .nav-list {
-    @apply space-y-3 text-sm;
+    @apply space-y-3 text-sm mt-2;
 }
 
 .nav-item {
-    @apply flex w-full shrink-0 items-center gap-x-2 text-gray-700 hover:text-gray-900 cursor-pointer;
+    @apply flex w-full shrink-0 items-center gap-x-1 font-bold text-gray-600 hover:text-gray-900 cursor-pointer;
 }
 
 .nav-item-icon {
@@ -21,4 +34,3 @@
 .app-navigation-mini .nav-item-text {
     opacity: 0;
 }
-

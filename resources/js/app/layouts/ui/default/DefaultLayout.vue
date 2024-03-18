@@ -8,7 +8,7 @@ defineProps({
 <template>
     <div class="layout">
         <app-navigation/>
-        <main class="main">
+        <main class="main ml-14 p-1">
             <router-view></router-view>
         </main>
     </div>

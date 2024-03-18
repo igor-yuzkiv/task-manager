@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import {DefaultLayout} from "@/app/layouts";
-import {defaultRoutes} from "@/app/router/routes";
+import {AppRoutes} from "@/app/router/AppRoutes.ts";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -8,7 +8,7 @@ export const router = createRouter({
         {
             path: '/',
             component: DefaultLayout,
-            children: defaultRoutes
+            children: Object.values(AppRoutes)
         }
     ]
 })
